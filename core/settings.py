@@ -72,6 +72,16 @@ TEMPLATES = [
 WSGI_APPLICATION = 'core.wsgi.application'
 
 import os
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
+sentry_sdk.init(
+    dsn="https://placeholder@sentry.io/123", # Remplace par ton DSN Sentry plus tard
+    integrations=[DjangoIntegration()],
+    traces_sample_rate=1.0,
+    send_default_pii=True
+)
+
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
