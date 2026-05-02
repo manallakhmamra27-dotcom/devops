@@ -29,6 +29,12 @@
             </button>
         </a>
 
+        {% if success %}
+            <p style="color: green; font-size: 0.9em; margin-top: 10px;">
+                ✅ Données mises à jour avec succès !
+            </p>
+        {% endif %}
+
         {% if error %}
             <p style="color: orange; font-size: 0.9em; margin-top: 10px;">
                 ⚠️ Erreur de connexion au serveur de données. Veuillez réessayer.
