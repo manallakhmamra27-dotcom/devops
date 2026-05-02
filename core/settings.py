@@ -76,7 +76,7 @@ import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 
 sentry_sdk.init(
-    dsn="https://placeholder@sentry.io/123", # Remplace par ton DSN Sentry plus tard
+    dsn="https://1ceda406930eab7ff3e5f6d0f695230d@o4511322208403456.ingest.de.sentry.io/4511322271121488",
     integrations=[DjangoIntegration()],
     traces_sample_rate=1.0,
     send_default_pii=True
