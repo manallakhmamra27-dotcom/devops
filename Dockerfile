@@ -22,4 +22,4 @@ COPY . .
 EXPOSE 8000
 
 # 8. Commande de lancement
-CMD ["gunicorn", "core.wsgi", "--bind", "0.0.0.0:8000"]
+CMD ["python", "-m", "gunicorn", "core.wsgi", "--bind", "0.0.0.0:8000"]
