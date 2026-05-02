@@ -7,9 +7,9 @@ name: Guard-Pipeline-CI-Docker
 # Quand le robot doit-il se réveiller ?
 
 on:
-
+  push:
+    branches: [ "main", "develop" ]
   pull_request:
-
     branches: [ "main" ] # Quand on veut fusionner vers la production
 
  
